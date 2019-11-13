@@ -7,7 +7,7 @@
   "author": "Jean-Charles Vialatte",
   "email": "jean-charles.vialatte@senx.io",
   "license": "SenX private",
-  "git": "",
+  "git": "https://github.com/senx/warp10-ext-forecasting-doc",
   "repoUrl": "https://dl.bintray.com/senx/maven",
   "tags": [
     "forecast"
