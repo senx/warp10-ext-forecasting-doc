@@ -1,0 +1,15 @@
+{
+  "type": "ext",
+  "group": "io.warp10.ml",
+  "artifact": "warp10-ext-forecasting",
+  "version": "1.0.0",
+  "description": "Forecast extension",
+  "author": "Jean-Charles Vialatte",
+  "email": "jean-charles.vialatte@senx.io",
+  "license": "SenX private",
+  "git": "",
+  "repoUrl": "https://dl.bintray.com/senx/maven",
+  "tags": [
+    "forecast"
+  ]
+}
