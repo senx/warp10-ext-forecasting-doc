@@ -1,0 +1,35 @@
+{
+'name' 'SES' 
+'since' '2.2' 
+'deprecated' '' 
+'deleted' '' 
+'version' 'all' 
+'tags' [ 'forecast' 'machine learning' ] 
+'desc' 'Fit a simple exponential smoothing forecast model.' 
+'sig' [ [ [ 'gts:LIST' ] [ 'result:X-GTSFORECASTMODEL' ] ] [ [ {
+'max evals' 'max evals:LONG' 
+'optimize' 'optimize:BOOLEAN' 
+'alpha' 'alpha:DOUBLE' 
+'gts' 'gts:LIST' 
+} ] [ 'result:X-GTSFORECASTMODEL' ] ] ] 
+'params' {
+'max evals' 'Maximum number of optimizing evaluations to converge to a solution.' 
+'optimize' 'Whether to optimize the model or use initial values. Default to true.' 
+'alpha' 'Initial value for alpha parameter (level coefficient). Default to 0.9' 
+'gts' 'A Geo Time Series™.' 
+'result' 'An instance of X-GTSFORECASTMODEL.' 
+} 
+'related' [ 'FORECAST.ANOMALIES.DROP' 'SARIMA' 'SEARCH.NNET' 'FORECAST' 'HOLTWINTERS' 'CROSSFORECAST.ADDVALUES' 'RANDOMWALK' 'FORECAST.ADDVALUES' 'ANY.ARIMA' 'SRANDOMWALK' 'ARMA' 'AIC' 'INFORECAST' 'LSTM' 'NNETAR' 'CROSSFORECAST' 'SARMA' 'HOLT' 'SEARCH.ETS' 'SEARCH.ARIMA' 'AUTO' 'SEARCH.SARIMA' 'ARIMA' 'FORECAST.ANOMALIES' 'MODELINFO' 'STATIONARY' ] 
+'examples' [ ] 
+'conf' [ ] 
+} 'infomap' STORE
+<%
+!$infomap INFO
+<%
+'SES' EVAL
+%>
+<% %> <% %> TRY
+%>
+'macro' STORE
+// Unit tests
+$macro

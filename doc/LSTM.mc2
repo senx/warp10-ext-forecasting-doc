@@ -1,0 +1,37 @@
+{
+'name' 'LSTM' 
+'since' '2.2' 
+'deprecated' '' 
+'deleted' '' 
+'version' 'all' 
+'tags' [ 'forecast' 'machine learning' ] 
+'desc' 'Fit a GTS forecast model of type neural network (which is an LSTM) to a Geo Time Series™.' 
+'sig' [ [ [ 'gts:LIST' ] [ 'result:X-GTSFORECASTMODEL' ] ] [ [ {
+'learning rate' 'learning rate:DOUBLE' 
+'epochs' 'epochs:LONG' 
+'activation' 'activation:STRING' 
+'hidden neurons' 'hidden neurons:LIST' 
+'gts' 'gts:LIST' 
+} ] [ 'result:X-GTSFORECASTMODEL' ] ] ] 
+'params' {
+'learning rate' 'The learning rate. Default to 0.01.' 
+'epochs' 'The number of training epochs. Default to 100.' 
+'activation' 'Activation function used. default to %27relu%27' 
+'hidden neurons' 'A LIST which size is the number of hidden layers and elements are the number of hidden neurons on each layer. Default to [ 20 ].' 
+'gts' 'A Geo Time Series™.' 
+'result' 'An instance of X-GTSFORECASTMODEL.' 
+} 
+'related' [ 'SES' 'FORECAST.ANOMALIES.DROP' 'SARIMA' 'SEARCH.NNET' 'FORECAST' 'HOLTWINTERS' 'CROSSFORECAST.ADDVALUES' 'RANDOMWALK' 'FORECAST.ADDVALUES' 'ANY.ARIMA' 'SRANDOMWALK' 'ARMA' 'AIC' 'INFORECAST' 'NNETAR' 'CROSSFORECAST' 'SARMA' 'HOLT' 'SEARCH.ETS' 'SEARCH.ARIMA' 'AUTO' 'SEARCH.SARIMA' 'ARIMA' 'FORECAST.ANOMALIES' 'MODELINFO' 'STATIONARY' ] 
+'examples' [ ] 
+'conf' [ ] 
+} 'infomap' STORE
+<%
+!$infomap INFO
+<%
+'LSTM' EVAL
+%>
+<% %> <% %> TRY
+%>
+'macro' STORE
+// Unit tests
+$macro

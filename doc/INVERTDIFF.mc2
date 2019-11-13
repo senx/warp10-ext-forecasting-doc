@@ -1,0 +1,33 @@
+{
+'name' 'INVERTDIFF' 
+'since' '2.2' 
+'deprecated' '' 
+'deleted' '' 
+'version' 'all' 
+'tags' [ 'time differencing' 'machine learning' ] 
+'desc' 'Invert time differencing done with DIFF to an input GTS.' 
+'sig' [ [ [ 'lags:LIST' 'base:GTS' 'gts:GTS' ] [ 'result:GTS' ] ] [ [ {
+'lags' 'lags:LIST' 
+'base' 'base:GTS' 
+'gts' 'gts:GTS' 
+} ] [ 'result:GTS' ] ] ] 
+'params' {
+'lags' 'The lags (in number of buckets) corresponding to each seasonality that is being differenced.' 
+'base' 'The base GTS from which n contiguous values will be used to bootstrap the integration, where n is the biggest input lag. The most recent tick used to bootstrap is the one that is aligned with the first bucket of the input GTS.' 
+'gts' 'Input bucketized GTS to be integrated.' 
+'result' 'Output.' 
+} 
+'related' [ 'DIFF' 'DIFFERENCER' ] 
+'examples' [ ] 
+'conf' [ ] 
+} 'infomap' STORE
+<%
+!$infomap INFO
+<%
+'INVERTDIFF' EVAL
+%>
+<% %> <% %> TRY
+%>
+'macro' STORE
+// Unit tests
+$macro

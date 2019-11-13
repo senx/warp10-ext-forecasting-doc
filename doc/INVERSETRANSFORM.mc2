@@ -1,0 +1,31 @@
+{
+'name' 'INVERSETRANSFORM' 
+'since' '2.2' 
+'deprecated' '' 
+'deleted' '' 
+'version' 'all' 
+'tags' [ 'transform' 'machine learning' ] 
+'desc' 'Revert the transformation of a X-GTSTRANSFORMER to an input GTS.' 
+'sig' [ [ [ 'transformer:X-GTSTRANSFORMER' 'gts:GTS' ] [ 'result:GTS' ] ] [ [ {
+'transformer' 'transformer:X-GTSTRANSFORMER' 
+'gts' 'gts:GTS' 
+} ] [ 'result:GTS' ] ] ] 
+'params' {
+'transformer' 'An instance of X-GTSTRANSFORMER.' 
+'gts' 'The GTS that is being inverse transformed.' 
+'result' 'The reverted GTS' 
+} 
+'related' [ 'FIT' 'GTSTRANSFORMER' 'TRANSFORM' ] 
+'examples' [ ] 
+'conf' [ ] 
+} 'infomap' STORE
+<%
+!$infomap INFO
+<%
+'INVERSETRANSFORM' EVAL
+%>
+<% %> <% %> TRY
+%>
+'macro' STORE
+// Unit tests
+$macro

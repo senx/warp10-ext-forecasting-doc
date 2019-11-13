@@ -1,0 +1,37 @@
+{
+'name' 'ARIMA' 
+'since' '2.2' 
+'deprecated' '' 
+'deleted' '' 
+'version' 'all' 
+'tags' [ 'forecast' 'machine learning' ] 
+'desc' 'Fit a GTS forecast model of type ARIMA to a Geo Time Series™.' 
+'sig' [ [ [ 'q:LONG' 'd:LONG' 'p:LONG' 'gts:LIST' ] [ 'result:X-GTSFORECASTMODEL' ] ] [ [ {
+'fitStrat' 'fitStrat:STRING' 
+'q' 'q:LONG' 
+'d' 'd:LONG' 
+'p' 'p:LONG' 
+'gts' 'gts:LIST' 
+} ] [ 'result:X-GTSFORECASTMODEL' ] ] ] 
+'params' {
+'fitStrat' 'Fitting strategy employed. Can be one of CSS, CSSML, or ML. CSS means conditional least square and ML means maximum likelihood. Default to CSS.' 
+'q' 'The number of moving average coefficients.' 
+'d' 'The number of differencing operations.' 
+'p' 'The number of auto regressive coefficients.' 
+'gts' 'A Geo Time Series™.' 
+'result' 'An instance of X-GTSFORECASTMODEL.' 
+} 
+'related' [ 'SES' 'FORECAST.ANOMALIES.DROP' 'SARIMA' 'SEARCH.NNET' 'FORECAST' 'HOLTWINTERS' 'CROSSFORECAST.ADDVALUES' 'RANDOMWALK' 'FORECAST.ADDVALUES' 'ANY.ARIMA' 'SRANDOMWALK' 'ARMA' 'AIC' 'INFORECAST' 'LSTM' 'NNETAR' 'CROSSFORECAST' 'SARMA' 'HOLT' 'SEARCH.ETS' 'SEARCH.ARIMA' 'AUTO' 'SEARCH.SARIMA' 'FORECAST.ANOMALIES' 'MODELINFO' 'STATIONARY' ] 
+'examples' [ ] 
+'conf' [ ] 
+} 'infomap' STORE
+<%
+!$infomap INFO
+<%
+'ARIMA' EVAL
+%>
+<% %> <% %> TRY
+%>
+'macro' STORE
+// Unit tests
+$macro

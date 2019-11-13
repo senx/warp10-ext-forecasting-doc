@@ -1,0 +1,31 @@
+{
+'name' 'SEARCH.NNET' 
+'since' '2.2' 
+'deprecated' '' 
+'deleted' '' 
+'version' 'all' 
+'tags' [ 'forecast' 'machine learning' ] 
+'desc' 'Automatically select and fit a seasonal GTS forecast model of type neural network to a GTS. It makes a grid search in the hyper-parameter space of Lstms and auto-regressive neural networks.' 
+'sig' [ [ [ 'gts:LIST' ] [ 'result:X-GTSFORECASTMODEL' ] ] [ [ {
+'interrupt' 'interrupt:LONG' 
+'gts' 'gts:LIST' 
+} ] [ 'result:X-GTSFORECASTMODEL' ] ] ] 
+'params' {
+'interrupt' 'Time (in us) at which a signal will be sent to SAUTO to interrupt its search. Default to 60.0s.' 
+'gts' 'A Geo Time Series™.' 
+'result' 'An instance of X-GTSFORECASTMODEL.' 
+} 
+'related' [ 'SES' 'FORECAST.ANOMALIES.DROP' 'SARIMA' 'FORECAST' 'HOLTWINTERS' 'CROSSFORECAST.ADDVALUES' 'RANDOMWALK' 'FORECAST.ADDVALUES' 'ANY.ARIMA' 'SRANDOMWALK' 'ARMA' 'AIC' 'INFORECAST' 'LSTM' 'NNETAR' 'CROSSFORECAST' 'SARMA' 'HOLT' 'SEARCH.ETS' 'SEARCH.ARIMA' 'AUTO' 'SEARCH.SARIMA' 'ARIMA' 'FORECAST.ANOMALIES' 'MODELINFO' 'STATIONARY' ] 
+'examples' [ ] 
+'conf' [ ] 
+} 'infomap' STORE
+<%
+!$infomap INFO
+<%
+'SEARCH.NNET' EVAL
+%>
+<% %> <% %> TRY
+%>
+'macro' STORE
+// Unit tests
+$macro

@@ -1,0 +1,45 @@
+{
+'name' 'SARIMA' 
+'since' '2.2' 
+'deprecated' '' 
+'deleted' '' 
+'version' 'all' 
+'tags' [ 'forecast' 'machine learning' ] 
+'desc' 'Fit a GTS forecast model of type Seasonal ARIMA to a Geo Time Series™.' 
+'sig' [ [ [ 'Q:LONG' 'D:LONG' 'P:LONG' 'q:LONG' 'd:LONG' 'p:LONG' 'cycle:LONG' 'gts:LIST' ] [ 'result:X-GTSFORECASTMODEL' ] ] [ [ {
+'fitStrat' 'fitStrat:STRING' 
+'Q' 'Q:LONG' 
+'D' 'D:LONG' 
+'P' 'P:LONG' 
+'q' 'q:LONG' 
+'d' 'd:LONG' 
+'p' 'p:LONG' 
+'cycle' 'cycle:LONG' 
+'gts' 'gts:LIST' 
+} ] [ 'result:X-GTSFORECASTMODEL' ] ] ] 
+'params' {
+'fitStrat' 'Fitting strategy employed. Can be one of CSS, CSSML, or ML. CSS means conditional least square and ML means maximum likelihood. Default to CSS.' 
+'Q' 'The number of seasonal moving average coefficients.' 
+'D' 'The number of seasonal differencing operations.' 
+'P' 'The number of seasonal auto regressive coefficients.' 
+'q' 'The number of moving average coefficients.' 
+'d' 'The number of differencing operations.' 
+'p' 'The number of auto regressive coefficients.' 
+'cycle' 'The number of ticks that compose a seasonal cycle.' 
+'gts' 'A Geo Time Series™.' 
+'result' 'An instance of X-GTSFORECASTMODEL.' 
+} 
+'related' [ 'SES' 'FORECAST.ANOMALIES.DROP' 'SEARCH.NNET' 'FORECAST' 'HOLTWINTERS' 'CROSSFORECAST.ADDVALUES' 'RANDOMWALK' 'FORECAST.ADDVALUES' 'ANY.ARIMA' 'SRANDOMWALK' 'ARMA' 'AIC' 'INFORECAST' 'LSTM' 'NNETAR' 'CROSSFORECAST' 'SARMA' 'HOLT' 'SEARCH.ETS' 'SEARCH.ARIMA' 'AUTO' 'SEARCH.SARIMA' 'ARIMA' 'FORECAST.ANOMALIES' 'MODELINFO' 'STATIONARY' ] 
+'examples' [ ] 
+'conf' [ ] 
+} 'infomap' STORE
+<%
+!$infomap INFO
+<%
+'SARIMA' EVAL
+%>
+<% %> <% %> TRY
+%>
+'macro' STORE
+// Unit tests
+$macro

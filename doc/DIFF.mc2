@@ -1,0 +1,31 @@
+{
+'name' 'DIFF' 
+'since' '2.2' 
+'deprecated' '' 
+'deleted' '' 
+'version' 'all' 
+'tags' [ 'time differencing' 'machine learning' ] 
+'desc' 'Time differencing of input GTS. The differencing can compound multiple seasonalities.' 
+'sig' [ [ [ 'lags:LIST' 'gts:LIST' ] [ 'result:GTS' ] ] [ [ {
+'lags' 'lags:LIST' 
+'gts' 'gts:LIST' 
+} ] [ 'result:GTS' ] ] ] 
+'params' {
+'lags' 'The lags (in number of buckets) corresponding to each seasonality that is being differenced.' 
+'gts' 'Input GTS to be differenced.' 
+'result' 'Output.' 
+} 
+'related' [ 'DIFFERENCER' 'INVERTDIFF' ] 
+'examples' [ ] 
+'conf' [ ] 
+} 'infomap' STORE
+<%
+!$infomap INFO
+<%
+'DIFF' EVAL
+%>
+<% %> <% %> TRY
+%>
+'macro' STORE
+// Unit tests
+$macro

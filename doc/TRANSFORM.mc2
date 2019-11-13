@@ -1,0 +1,31 @@
+{
+'name' 'TRANSFORM' 
+'since' '2.2' 
+'deprecated' '' 
+'deleted' '' 
+'version' 'all' 
+'tags' [ 'transform' 'machine learning' ] 
+'desc' 'Apply the transformation of a X-GTSTRANSFORMER to an input GTS.' 
+'sig' [ [ [ 'transformer:X-GTSTRANSFORMER' 'gts:GTS' ] [ 'result:GTS' ] ] [ [ {
+'transformer' 'transformer:X-GTSTRANSFORMER' 
+'gts' 'gts:GTS' 
+} ] [ 'result:GTS' ] ] ] 
+'params' {
+'transformer' 'An instance of X-GTSTRANSFORMER.' 
+'gts' 'The GTS that is being transformed.' 
+'result' 'The transformed GTS' 
+} 
+'related' [ 'FIT' 'GTSTRANSFORMER' 'INVERSETRANSFORM' ] 
+'examples' [ ] 
+'conf' [ ] 
+} 'infomap' STORE
+<%
+!$infomap INFO
+<%
+'TRANSFORM' EVAL
+%>
+<% %> <% %> TRY
+%>
+'macro' STORE
+// Unit tests
+$macro

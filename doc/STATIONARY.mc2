@@ -1,0 +1,29 @@
+{
+'name' 'STATIONARY' 
+'since' '2.2' 
+'deprecated' '' 
+'deleted' '' 
+'version' 'all' 
+'tags' [ 'forecast' 'machine learning' ] 
+'desc' 'Return true if input GTS is stationary (using an augmented Dickey-Fuller test).' 
+'sig' [ [ [ 'gts:LIST' ] [ 'result:BOOLEAN' ] ] [ [ {
+'gts' 'gts:LIST' 
+} ] [ 'result:BOOLEAN' ] ] ] 
+'params' {
+'gts' 'A Geo Time Series™.' 
+'result' 'A BOOLEAN indicating whether the GTS is stationary or not.' 
+} 
+'related' [ 'SES' 'FORECAST.ANOMALIES.DROP' 'SARIMA' 'SEARCH.NNET' 'FORECAST' 'HOLTWINTERS' 'CROSSFORECAST.ADDVALUES' 'RANDOMWALK' 'FORECAST.ADDVALUES' 'ANY.ARIMA' 'SRANDOMWALK' 'ARMA' 'AIC' 'INFORECAST' 'LSTM' 'NNETAR' 'CROSSFORECAST' 'SARMA' 'HOLT' 'SEARCH.ETS' 'SEARCH.ARIMA' 'AUTO' 'SEARCH.SARIMA' 'ARIMA' 'FORECAST.ANOMALIES' 'MODELINFO' ] 
+'examples' [ ] 
+'conf' [ ] 
+} 'infomap' STORE
+<%
+!$infomap INFO
+<%
+'STATIONARY' EVAL
+%>
+<% %> <% %> TRY
+%>
+'macro' STORE
+// Unit tests
+$macro

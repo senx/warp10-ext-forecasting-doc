@@ -1,0 +1,33 @@
+{
+'name' 'GTSTRANSFORMER' 
+'since' '2.2' 
+'deprecated' '' 
+'deleted' '' 
+'version' 'all' 
+'tags' [ 'transform' 'machine learning' ] 
+'desc' 'Build a X-GTSTRANSFORMER from a set of fit, transform and inverse-transform macros.' 
+'sig' [ [ [ 'inverse:MACRO' 'ml/transform:MACRO' 'fit:MACRO' ] [ 'transformer:X-GTSTRANSFORMER' ] ] [ [ {
+'inverse' 'inverse:MACRO' 
+'ml/transform' 'ml/transform:MACRO' 
+'fit' 'fit:MACRO' 
+} ] [ 'transformer:X-GTSTRANSFORMER' ] ] ] 
+'params' {
+'inverse' 'The inverse-transform macro. Can be left NULL if not used. It must at least consume and leave a transformed GTS on the top of stack.' 
+'ml/transform' 'The transform macro. It must at least consume and leave a transformed GTS on the top of the stack.' 
+'fit' 'The fit macro. It must at least consume a GTS and leave a GTSTRANSFORMER on the top of the stack.' 
+'transformer' 'The resulting X-GTSTRANSFORMER.' 
+} 
+'related' [ 'FIT' 'INVERSETRANSFORM' 'TRANSFORM' ] 
+'examples' [ ] 
+'conf' [ ] 
+} 'infomap' STORE
+<%
+!$infomap INFO
+<%
+'GTSTRANSFORMER' EVAL
+%>
+<% %> <% %> TRY
+%>
+'macro' STORE
+// Unit tests
+$macro

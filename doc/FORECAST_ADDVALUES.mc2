@@ -1,0 +1,31 @@
+{
+'name' 'FORECAST.ADDVALUES' 
+'since' '2.2' 
+'deprecated' '' 
+'deleted' '' 
+'version' 'all' 
+'tags' [ 'forecast' 'machine learning' ] 
+'desc' 'Produce a forecast given a GTS forecast model. Append the forecast to the end of the GTS containing observation data.' 
+'sig' [ [ [ 'steps:LONG' 'model:LIST' ] [ 'result:GTS' ] ] [ [ {
+'steps' 'steps:LONG' 
+'model' 'model:LIST' 
+} ] [ 'result:GTS' ] ] ] 
+'params' {
+'steps' 'The number of steps ahead to forecast.' 
+'model' 'An instance of X-GTSFORECASTMODEL.' 
+'result' 'The original GTS to which forecasts are appended.' 
+} 
+'related' [ 'SES' 'FORECAST.ANOMALIES.DROP' 'SARIMA' 'SEARCH.NNET' 'FORECAST' 'HOLTWINTERS' 'CROSSFORECAST.ADDVALUES' 'RANDOMWALK' 'ANY.ARIMA' 'SRANDOMWALK' 'ARMA' 'AIC' 'INFORECAST' 'LSTM' 'NNETAR' 'CROSSFORECAST' 'SARMA' 'HOLT' 'SEARCH.ETS' 'SEARCH.ARIMA' 'AUTO' 'SEARCH.SARIMA' 'ARIMA' 'FORECAST.ANOMALIES' 'MODELINFO' 'STATIONARY' ] 
+'examples' [ ] 
+'conf' [ ] 
+} 'infomap' STORE
+<%
+!$infomap INFO
+<%
+'FORECAST.ADDVALUES' EVAL
+%>
+<% %> <% %> TRY
+%>
+'macro' STORE
+// Unit tests
+$macro

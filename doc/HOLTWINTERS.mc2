@@ -1,0 +1,47 @@
+{
+'name' 'HOLTWINTERS' 
+'since' '2.2' 
+'deprecated' '' 
+'deleted' '' 
+'version' 'all' 
+'tags' [ 'forecast' 'machine learning' ] 
+'desc' 'Fit a GTS forecast model of type Holt Winters (seasonal-trend triple exponential smoothing).' 
+'sig' [ [ [ 'cycle:LONG' 'gts:LIST' ] [ 'result:X-GTSFORECASTMODEL' ] ] [ [ {
+'max evals' 'max evals:LONG' 
+'optimize' 'optimize:BOOLEAN' 
+'phi' 'phi:DOUBLE' 
+'gamma' 'gamma:DOUBLE' 
+'beta' 'beta:DOUBLE' 
+'alpha' 'alpha:DOUBLE' 
+'seasonal type' 'seasonal type:STRING' 
+'trend type' 'trend type:STRING' 
+'cycle' 'cycle:LONG' 
+'gts' 'gts:LIST' 
+} ] [ 'result:X-GTSFORECASTMODEL' ] ] ] 
+'params' {
+'max evals' 'Maximum number of optimizing evaluations to converge to a solution.' 
+'optimize' 'Whether to optimize the model or use initial values. Default to true.' 
+'phi' 'Initial value for phi parameter (damp coefficient). Default to 0.9' 
+'gamma' 'Initial value for gamma parameter (seasonal coefficient). Default to 0.9' 
+'beta' 'Initial value for beta parameter (trend coefficient). Default to 0.9' 
+'alpha' 'Initial value for alpha parameter (level coefficient). Default to 0.9' 
+'seasonal type' '%27multiplicative%27 (default) or %27additive%27 or %27none%27.' 
+'trend type' '%27additive%27 (default) or %27damped%27 or %27none%27.' 
+'cycle' 'The length of a season in number of ticks.' 
+'gts' 'A Geo Time Series™.' 
+'result' 'An instance of X-GTSFORECASTMODEL.' 
+} 
+'related' [ 'SES' 'FORECAST.ANOMALIES.DROP' 'SARIMA' 'SEARCH.NNET' 'FORECAST' 'CROSSFORECAST.ADDVALUES' 'RANDOMWALK' 'FORECAST.ADDVALUES' 'ANY.ARIMA' 'SRANDOMWALK' 'ARMA' 'AIC' 'INFORECAST' 'LSTM' 'NNETAR' 'CROSSFORECAST' 'SARMA' 'HOLT' 'SEARCH.ETS' 'SEARCH.ARIMA' 'AUTO' 'SEARCH.SARIMA' 'ARIMA' 'FORECAST.ANOMALIES' 'MODELINFO' 'STATIONARY' ] 
+'examples' [ ] 
+'conf' [ ] 
+} 'infomap' STORE
+<%
+!$infomap INFO
+<%
+'HOLTWINTERS' EVAL
+%>
+<% %> <% %> TRY
+%>
+'macro' STORE
+// Unit tests
+$macro

@@ -1,0 +1,29 @@
+{
+'name' 'INFORECAST' 
+'since' '2.2' 
+'deprecated' '' 
+'deleted' '' 
+'version' 'all' 
+'tags' [ 'forecast' 'machine learning' ] 
+'desc' 'Produce in-sample one-step ahead forecasts given a GTS forecast model. Return a Geo Time Series™ containing the forecasts.' 
+'sig' [ [ [ 'model:LIST' ] [ 'result:GTS' ] ] [ [ {
+'model' 'model:LIST' 
+} ] [ 'result:GTS' ] ] ] 
+'params' {
+'model' 'An instance of X-GTSFORECASTMODEL.' 
+'result' 'The GTS of forecasts.' 
+} 
+'related' [ 'SES' 'FORECAST.ANOMALIES.DROP' 'SARIMA' 'SEARCH.NNET' 'FORECAST' 'HOLTWINTERS' 'CROSSFORECAST.ADDVALUES' 'RANDOMWALK' 'FORECAST.ADDVALUES' 'ANY.ARIMA' 'SRANDOMWALK' 'ARMA' 'AIC' 'LSTM' 'NNETAR' 'CROSSFORECAST' 'SARMA' 'HOLT' 'SEARCH.ETS' 'SEARCH.ARIMA' 'AUTO' 'SEARCH.SARIMA' 'ARIMA' 'FORECAST.ANOMALIES' 'MODELINFO' 'STATIONARY' ] 
+'examples' [ ] 
+'conf' [ ] 
+} 'infomap' STORE
+<%
+!$infomap INFO
+<%
+'INFORECAST' EVAL
+%>
+<% %> <% %> TRY
+%>
+'macro' STORE
+// Unit tests
+$macro
