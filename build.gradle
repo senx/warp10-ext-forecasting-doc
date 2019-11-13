@@ -54,9 +54,10 @@ def getVersionName(String revision) {
 // bintrayApiKey = The bintray API key
 //
 
-project.ext.bintrayRepo = '@BINTRAYREPO#'
-project.ext.bintrayVcsUrl = '@VCSURL@'
-project.ext.bintrayLicenses = [ '@LICENSE@' ]
+project.ext.bintrayRepo = 'maven'
+project.ext.bintrayVcsUrl = 'https://github.com/senx/warp10-ext-forecasting-doc'
+project.ext.bintrayLicenses = [ 'Apache-2.0' ]
+project.ext.'signing.gnupg.keyName' = 'B25F654ACDC337788AE80F660678D04645810072'
 
 //
 // GnuPG configuration for signing module
@@ -66,7 +67,7 @@ project.ext.bintrayLicenses = [ '@LICENSE@' ]
 //project.ext.'signing.gnupg.keyName' = 'hhhhhhhh'
 
 
-project.ext.group = 'io.warp10.ml'
+project.ext.group = 'io.warp10'
 project.ext.name = 'warp10-ext-forecasting'
 project.ext.uberjar = null != System.getProperty('uberjar')
 project.ext.version = getVersionName('1.0.0') + (project.ext.uberjar ? '-uberjar' : '')

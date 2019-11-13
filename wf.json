@@ -1,6 +1,6 @@
 {
   "type": "ext",
-  "group": "io.warp10.ml",
+  "group": "io.warp10",
   "artifact": "warp10-ext-forecasting",
   "version": "1.0.0",
   "description": "Forecast extension",
