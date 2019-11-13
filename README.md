@@ -3,6 +3,8 @@
 
 This repository only contains the documentation of warp10-ext-forecasting.
 
+The documentation is located under `doc/`.
+
 These functions are available on the Warp 10 instance of the sandbox.
 
 To install this extension on your own instance, you can contact us.
@@ -65,10 +67,3 @@ DIFFERENCER       // build a GTS transformer for time differencing
 
 `<GTS> AUTO 5 FORECAST.ADDVALUES` merges a GTS with its forecast.
 
-#### Documentation
-
-The documentation is located under `doc/`.
-
-To install an extension, see the [Warp 10 documentation](https://www.warp10.io/content/03_Documentation/07_Extending_Warp_10/03_Extensions).
-
-Contact: jean-charles.vialatte@senx.io
