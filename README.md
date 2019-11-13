@@ -3,7 +3,7 @@
 
 This repository only contains the documentation of warp10-ext-forecasting.
 
-The documentation is located under `doc/`.
+The documentation is located under `src/main/warpscript/io.warp10/warp10-ext-forecasting/`.
 
 These functions are available on the Warp 10 instance of the sandbox.
 
