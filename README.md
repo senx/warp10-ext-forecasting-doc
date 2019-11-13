@@ -1,3 +1,10 @@
+
+This repository only contains the documentation of warp10-ext-forecasting.
+
+These functions are available on the Warp 10 instance of the sandbox.
+
+To install this extension on your own instance, you can contact us.
+
 ### Forecast extension for the WarpScript language
 
 Functions that build GTS forecast models:
@@ -52,9 +59,9 @@ DIFFERENCER       // build a GTS transformer for time differencing
 
 #### Examples
 
-`<GTS> AUTO.ARIMA 5 FORECAST` pushes onto the stack a GTS with 5 forecast ticks.
+`<GTS> AUTO 5 FORECAST` pushes onto the stack a GTS with 5 forecast ticks.
 
-`<GTS> AUTO.ARIMA 5 FORECAST.ADDVALUES` merges a GTS with its forecast.
+`<GTS> AUTO 5 FORECAST.ADDVALUES` merges a GTS with its forecast.
 
 #### Documentation
 
