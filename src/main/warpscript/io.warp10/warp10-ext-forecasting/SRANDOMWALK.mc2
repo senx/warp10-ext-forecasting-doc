@@ -7,13 +7,13 @@
 'tags' [ 'forecast' 'machine learning' ] 
 'desc' 'Fit a GTS forecast model of type RANDOMWALK to a Geo Time Series™. Internal random number generator must have been seeded first with PRNG.' 
 'sig' [ [ [ 'gts:LIST' ] [ 'result:X-GTSFORECASTMODEL' ] ] [ [ {
-'lower radius' 'lower radius:DOUBLE' 
-'upper radius' 'upper radius:DOUBLE' 
+'lower bound' 'lower bound:DOUBLE' 
+'upper bound' 'upper bound:DOUBLE' 
 'gts' 'gts:LIST' 
 } ] [ 'result:X-GTSFORECASTMODEL' ] ] ] 
 'params' {
-'lower radius' 'Lower radius of the interval around last value where the next random value can fall.' 
-'upper radius' 'Upper radius of the interval around last value where the next random value can fall.' 
+'lower bound' 'Lower radius of the interval around last value where the next random value can fall.' 
+'upper bound' 'Upper radius of the interval around last value where the next random value can fall.' 
 'gts' 'A Geo Time Series™.' 
 'result' 'An instance of X-GTSFORECASTMODEL.' 
 } 
