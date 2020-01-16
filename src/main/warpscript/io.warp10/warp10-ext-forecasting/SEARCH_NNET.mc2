@@ -1,19 +1,21 @@
 {
 'name' 'SEARCH.NNET' 
-'since' '2.2' 
+'since' '2.3.0-131-g41571d6c' 
 'deprecated' '' 
 'deleted' '' 
 'version' 'all' 
 'tags' [ 'forecast' 'machine learning' ] 
 'desc' 'Automatically select and fit a seasonal GTS forecast model of type neural network to a GTS. It makes a grid search in the hyper-parameter space of Lstms and auto-regressive neural networks.' 
-'sig' [ [ [ 'gts:LIST' ] [ 'result:X-GTSFORECASTMODEL' ] ] [ [ {
+'sig' [ [ [ 'gts:LIST' ] [ 'model:X-GTSFORECASTMODEL' ] ] [ [ {
 'interrupt' 'interrupt:LONG' 
+'input max size' 'input max size:LONG' 
 'gts' 'gts:LIST' 
-} ] [ 'result:X-GTSFORECASTMODEL' ] ] ] 
+} ] [ 'model:X-GTSFORECASTMODEL' ] ] ] 
 'params' {
 'interrupt' 'Time (in us) at which a signal will be sent to SAUTO to interrupt its search. Default to 60.0s.' 
+'input max size' 'Maximum number of most recent ticks to consider to build the forecast model. Default to 100. The function has the side effect to shrink the input GTS to this value.' 
 'gts' 'A Geo Time Series™.' 
-'result' 'An instance of X-GTSFORECASTMODEL.' 
+'model' 'An instance of X-GTSFORECASTMODEL.' 
 } 
 'related' [ 'SES' 'FORECAST.ANOMALIES.DROP' 'SARIMA' 'FORECAST' 'HOLTWINTERS' 'CROSSFORECAST.ADDVALUES' 'RANDOMWALK' 'FORECAST.ADDVALUES' 'ANY.ARIMA' 'SRANDOMWALK' 'ARMA' 'AIC' 'INFORECAST' 'LSTM' 'NNETAR' 'CROSSFORECAST' 'SARMA' 'HOLT' 'SEARCH.ETS' 'SEARCH.ARIMA' 'AUTO' 'SEARCH.SARIMA' 'ARIMA' 'FORECAST.ANOMALIES' 'MODELINFO' 'STATIONARY' ] 
 'examples' [ ] 

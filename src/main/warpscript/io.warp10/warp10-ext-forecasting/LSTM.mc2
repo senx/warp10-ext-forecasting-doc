@@ -1,25 +1,27 @@
 {
 'name' 'LSTM' 
-'since' '2.2' 
+'since' '2.3.0-131-g41571d6c' 
 'deprecated' '' 
 'deleted' '' 
 'version' 'all' 
 'tags' [ 'forecast' 'machine learning' ] 
 'desc' 'Fit a GTS forecast model of type neural network (which is an LSTM) to a Geo Time Series™.' 
-'sig' [ [ [ 'gts:LIST' ] [ 'result:X-GTSFORECASTMODEL' ] ] [ [ {
+'sig' [ [ [ 'gts:LIST' ] [ 'model:X-GTSFORECASTMODEL' ] ] [ [ {
 'learning rate' 'learning rate:DOUBLE' 
 'epochs' 'epochs:LONG' 
 'activation' 'activation:STRING' 
 'hidden neurons' 'hidden neurons:LIST' 
+'input max size' 'input max size:LONG' 
 'gts' 'gts:LIST' 
-} ] [ 'result:X-GTSFORECASTMODEL' ] ] ] 
+} ] [ 'model:X-GTSFORECASTMODEL' ] ] ] 
 'params' {
 'learning rate' 'The learning rate. Default to 0.01.' 
 'epochs' 'The number of training epochs. Default to 100.' 
 'activation' 'Activation function used. default to %27relu%27' 
 'hidden neurons' 'A LIST which size is the number of hidden layers and elements are the number of hidden neurons on each layer. Default to [ 20 ].' 
+'input max size' 'Maximum number of most recent ticks to consider to build the forecast model. Default to 100. The function has the side effect to shrink the input GTS to this value.' 
 'gts' 'A Geo Time Series™.' 
-'result' 'An instance of X-GTSFORECASTMODEL.' 
+'model' 'An instance of X-GTSFORECASTMODEL.' 
 } 
 'related' [ 'SES' 'FORECAST.ANOMALIES.DROP' 'SARIMA' 'SEARCH.NNET' 'FORECAST' 'HOLTWINTERS' 'CROSSFORECAST.ADDVALUES' 'RANDOMWALK' 'FORECAST.ADDVALUES' 'ANY.ARIMA' 'SRANDOMWALK' 'ARMA' 'AIC' 'INFORECAST' 'NNETAR' 'CROSSFORECAST' 'SARMA' 'HOLT' 'SEARCH.ETS' 'SEARCH.ARIMA' 'AUTO' 'SEARCH.SARIMA' 'ARIMA' 'FORECAST.ANOMALIES' 'MODELINFO' 'STATIONARY' ] 
 'examples' [ ] 

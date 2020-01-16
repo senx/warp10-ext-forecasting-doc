@@ -1,6 +1,6 @@
 {
 'name' 'MODELINFO' 
-'since' '2.2' 
+'since' '2.3.0-131-g41571d6c' 
 'deprecated' '' 
 'deleted' '' 
 'version' 'all' 

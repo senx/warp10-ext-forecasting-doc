@@ -1,13 +1,14 @@
 {
 'name' 'SARIMA' 
-'since' '2.2' 
+'since' '2.3.0-131-g41571d6c' 
 'deprecated' '' 
 'deleted' '' 
 'version' 'all' 
 'tags' [ 'forecast' 'machine learning' ] 
 'desc' 'Fit a GTS forecast model of type Seasonal ARIMA to a Geo Time Series™.' 
-'sig' [ [ [ 'Q:LONG' 'D:LONG' 'P:LONG' 'q:LONG' 'd:LONG' 'p:LONG' 'cycle:LONG' 'gts:LIST' ] [ 'result:X-GTSFORECASTMODEL' ] ] [ [ {
+'sig' [ [ [ 'Q:LONG' 'D:LONG' 'P:LONG' 'q:LONG' 'd:LONG' 'p:LONG' 'cycle:LONG' 'gts:LIST' ] [ 'model:X-GTSFORECASTMODEL' ] ] [ [ {
 'fitStrat' 'fitStrat:STRING' 
+'input max size' 'input max size:LONG' 
 'Q' 'Q:LONG' 
 'D' 'D:LONG' 
 'P' 'P:LONG' 
@@ -16,9 +17,10 @@
 'p' 'p:LONG' 
 'cycle' 'cycle:LONG' 
 'gts' 'gts:LIST' 
-} ] [ 'result:X-GTSFORECASTMODEL' ] ] ] 
+} ] [ 'model:X-GTSFORECASTMODEL' ] ] ] 
 'params' {
 'fitStrat' 'Fitting strategy employed. Can be one of CSS, CSSML, or ML. CSS means conditional least square and ML means maximum likelihood. Default to CSS.' 
+'input max size' 'Maximum number of most recent ticks to consider to build the forecast model. Default to 10000. The function has the side effect to shrink the input GTS to this value.' 
 'Q' 'The number of seasonal moving average coefficients.' 
 'D' 'The number of seasonal differencing operations.' 
 'P' 'The number of seasonal auto regressive coefficients.' 
@@ -27,7 +29,7 @@
 'p' 'The number of auto regressive coefficients.' 
 'cycle' 'The number of ticks that compose a seasonal cycle.' 
 'gts' 'A Geo Time Series™.' 
-'result' 'An instance of X-GTSFORECASTMODEL.' 
+'model' 'An instance of X-GTSFORECASTMODEL.' 
 } 
 'related' [ 'SES' 'FORECAST.ANOMALIES.DROP' 'SEARCH.NNET' 'FORECAST' 'HOLTWINTERS' 'CROSSFORECAST.ADDVALUES' 'RANDOMWALK' 'FORECAST.ADDVALUES' 'ANY.ARIMA' 'SRANDOMWALK' 'ARMA' 'AIC' 'INFORECAST' 'LSTM' 'NNETAR' 'CROSSFORECAST' 'SARMA' 'HOLT' 'SEARCH.ETS' 'SEARCH.ARIMA' 'AUTO' 'SEARCH.SARIMA' 'ARIMA' 'FORECAST.ANOMALIES' 'MODELINFO' 'STATIONARY' ] 
 'examples' [ ] 

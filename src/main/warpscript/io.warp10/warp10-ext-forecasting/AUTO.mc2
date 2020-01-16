@@ -1,17 +1,17 @@
 {
 'name' 'AUTO' 
-'since' '2.2' 
+'since' '2.3.0-131-g41571d6c' 
 'deprecated' '' 
 'deleted' '' 
 'version' 'all' 
 'tags' [ 'forecast' 'machine learning' ] 
 'desc' 'Automatically compute a suitable forecast model.' 
-'sig' [ [ [ 'gts:LIST' ] [ 'result:X-GTSFORECASTMODEL' ] ] [ [ {
+'sig' [ [ [ 'gts:LIST' ] [ 'model:X-GTSFORECASTMODEL' ] ] [ [ {
 'gts' 'gts:LIST' 
-} ] [ 'result:X-GTSFORECASTMODEL' ] ] ] 
+} ] [ 'model:X-GTSFORECASTMODEL' ] ] ] 
 'params' {
 'gts' 'A Geo Time Series™.' 
-'result' 'An instance of X-GTSFORECASTMODEL.' 
+'model' 'An instance of X-GTSFORECASTMODEL.' 
 } 
 'related' [ 'SES' 'FORECAST.ANOMALIES.DROP' 'SARIMA' 'SEARCH.NNET' 'FORECAST' 'HOLTWINTERS' 'CROSSFORECAST.ADDVALUES' 'RANDOMWALK' 'FORECAST.ADDVALUES' 'ANY.ARIMA' 'SRANDOMWALK' 'ARMA' 'AIC' 'INFORECAST' 'LSTM' 'NNETAR' 'CROSSFORECAST' 'SARMA' 'HOLT' 'SEARCH.ETS' 'SEARCH.ARIMA' 'SEARCH.SARIMA' 'ARIMA' 'FORECAST.ANOMALIES' 'MODELINFO' 'STATIONARY' ] 
 'examples' [ ] 

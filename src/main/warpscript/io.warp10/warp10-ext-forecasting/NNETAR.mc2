@@ -1,12 +1,12 @@
 {
 'name' 'NNETAR' 
-'since' '2.2' 
+'since' '2.3.0-131-g41571d6c' 
 'deprecated' '' 
 'deleted' '' 
 'version' 'all' 
 'tags' [ 'forecast' 'machine learning' ] 
 'desc' 'Fit an auto regressive neural network model for forecasting.' 
-'sig' [ [ [ 'pre:LONG' 'gts:LIST' ] [ 'result:X-GTSFORECASTMODEL' ] ] [ [ {
+'sig' [ [ [ 'gts:LIST' ] [ 'model:X-GTSFORECASTMODEL' ] ] [ [ {
 'seeded' 'seeded:BOOLEAN' 
 'shuffle between epochs' 'shuffle between epochs:BOOLEAN' 
 'batch size' 'batch size:LONG' 
@@ -14,9 +14,9 @@
 'epochs' 'epochs:LONG' 
 'activation' 'activation:STRING' 
 'hidden neurons' 'hidden neurons:LIST' 
-'pre' 'pre:LONG' 
+'input max size' 'input max size:LONG' 
 'gts' 'gts:LIST' 
-} ] [ 'result:X-GTSFORECASTMODEL' ] ] ] 
+} ] [ 'model:X-GTSFORECASTMODEL' ] ] ] 
 'params' {
 'seeded' 'Whether the shuffling is seeded. The seed must be set beforehand with PRNG. Default to false' 
 'shuffle between epochs' 'Whether to shuffle between epochs. Default to true' 
@@ -25,9 +25,9 @@
 'epochs' 'The number of training epochs. Default to 100.' 
 'activation' 'Activation function used. default to %27relu%27' 
 'hidden neurons' 'A LIST which size is the number of hidden layers and elements are the number of hidden neurons on each layer. Default to [ 100 ].' 
-'pre' 'Number of previous values to consider to predict next values.' 
+'input max size' 'Maximum number of most recent ticks to consider to build the forecast model. Default to 1000. The function has the side effect to shrink the input GTS to this value.' 
 'gts' 'A Geo Time Series™.' 
-'result' 'An instance of X-GTSFORECASTMODEL.' 
+'model' 'An instance of X-GTSFORECASTMODEL.' 
 } 
 'related' [ 'SES' 'FORECAST.ANOMALIES.DROP' 'SARIMA' 'SEARCH.NNET' 'FORECAST' 'HOLTWINTERS' 'CROSSFORECAST.ADDVALUES' 'RANDOMWALK' 'FORECAST.ADDVALUES' 'ANY.ARIMA' 'SRANDOMWALK' 'ARMA' 'AIC' 'INFORECAST' 'LSTM' 'CROSSFORECAST' 'SARMA' 'HOLT' 'SEARCH.ETS' 'SEARCH.ARIMA' 'AUTO' 'SEARCH.SARIMA' 'ARIMA' 'FORECAST.ANOMALIES' 'MODELINFO' 'STATIONARY' ] 
 'examples' [ ] 

@@ -1,23 +1,25 @@
 {
 'name' 'ARMA' 
-'since' '2.2' 
+'since' '2.3.0-131-g41571d6c' 
 'deprecated' '' 
 'deleted' '' 
 'version' 'all' 
 'tags' [ 'forecast' 'machine learning' ] 
 'desc' 'Fit a GTS forecast model of type ARMA to a Geo Time Series™.' 
-'sig' [ [ [ 'q:LONG' 'p:LONG' 'gts:LIST' ] [ 'result:X-GTSFORECASTMODEL' ] ] [ [ {
+'sig' [ [ [ 'q:LONG' 'p:LONG' 'gts:LIST' ] [ 'model:X-GTSFORECASTMODEL' ] ] [ [ {
 'fitStrat' 'fitStrat:STRING' 
+'input max size' 'input max size:LONG' 
 'q' 'q:LONG' 
 'p' 'p:LONG' 
 'gts' 'gts:LIST' 
-} ] [ 'result:X-GTSFORECASTMODEL' ] ] ] 
+} ] [ 'model:X-GTSFORECASTMODEL' ] ] ] 
 'params' {
 'fitStrat' 'Fitting strategy employed. Can be one of CSS, CSSML, or ML. CSS means conditional least square and ML means maximum likelihood. Default to CSS.' 
+'input max size' 'Maximum number of most recent ticks to consider to build the forecast model. Default to 10000. The function has the side effect to shrink the input GTS to this value.' 
 'q' 'The number of moving average coefficients.' 
 'p' 'The number of auto regressive coefficients.' 
 'gts' 'A Geo Time Series™.' 
-'result' 'An instance of X-GTSFORECASTMODEL.' 
+'model' 'An instance of X-GTSFORECASTMODEL.' 
 } 
 'related' [ 'SES' 'FORECAST.ANOMALIES.DROP' 'SARIMA' 'SEARCH.NNET' 'FORECAST' 'HOLTWINTERS' 'CROSSFORECAST.ADDVALUES' 'RANDOMWALK' 'FORECAST.ADDVALUES' 'ANY.ARIMA' 'SRANDOMWALK' 'AIC' 'INFORECAST' 'LSTM' 'NNETAR' 'CROSSFORECAST' 'SARMA' 'HOLT' 'SEARCH.ETS' 'SEARCH.ARIMA' 'AUTO' 'SEARCH.SARIMA' 'ARIMA' 'FORECAST.ANOMALIES' 'MODELINFO' 'STATIONARY' ] 
 'examples' [ ] 
