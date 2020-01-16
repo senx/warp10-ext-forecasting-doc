@@ -7,7 +7,7 @@ The documentation is located under `src/main/warpscript/io.warp10/warp10-ext-for
 
 These functions are available on the Warp 10 instance of the sandbox.
 
-To install this extension on your own instance, you can contact us.
+To install this extension on-premise or to make it available on your saas plan, please contact us.
 
 ### Forecast extension for the WarpScript language
 
