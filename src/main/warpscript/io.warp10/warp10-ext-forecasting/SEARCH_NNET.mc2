@@ -13,7 +13,7 @@
 } ] [ 'model:X-GTSFORECASTMODEL' ] ] ] 
 'params' {
 'interrupt' 'Time (in us) at which a signal will be sent to SAUTO to interrupt its search. Default to 60.0s.' 
-'input max size' 'Maximum number of most recent ticks to consider to build the forecast model. Default to 100. The function has the side effect to shrink the input GTS to this value.' 
+'input max size' 'Maximum number of most recent ticks to consider to build the forecast model. Default to 100. The function has the side effect to sort the input GTS if it has to discard the older ticks.' 
 'gts' 'A Geo Time Series™.' 
 'model' 'An instance of X-GTSFORECASTMODEL.' 
 } 

@@ -20,7 +20,7 @@
 } ] [ 'model:X-GTSFORECASTMODEL' ] ] ] 
 'params' {
 'fitStrat' 'Fitting strategy employed. Can be one of CSS, CSSML, or ML. CSS means conditional least square and ML means maximum likelihood. Default to CSS.' 
-'input max size' 'Maximum number of most recent ticks to consider to build the forecast model. Default to 10000. The function has the side effect to shrink the input GTS to this value.' 
+'input max size' 'Maximum number of most recent ticks to consider to build the forecast model. Default to 10000. The function has the side effect to sort the input GTS if it has to discard the older ticks.' 
 'Q' 'The number of seasonal moving average coefficients.' 
 'D' 'The number of seasonal differencing operations.' 
 'P' 'The number of seasonal auto regressive coefficients.' 

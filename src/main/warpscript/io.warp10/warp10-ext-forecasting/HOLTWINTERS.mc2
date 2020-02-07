@@ -28,7 +28,7 @@
 'alpha' 'Initial value for alpha parameter (level coefficient). Default to 0.9' 
 'seasonal type' '%27multiplicative%27 (default) or %27additive%27 or %27none%27.' 
 'trend type' '%27additive%27 (default) or %27damped%27 or %27none%27.' 
-'input max size' 'Maximum number of most recent ticks to consider to build the forecast model. Default to 10000. The function has the side effect to shrink the input GTS to this value.' 
+'input max size' 'Maximum number of most recent ticks to consider to build the forecast model. Default to 10000. The function has the side effect to sort the input GTS if it has to discard the older ticks.' 
 'cycle' 'The length of a season in number of ticks.' 
 'gts' 'A Geo Time Series™.' 
 'model' 'An instance of X-GTSFORECASTMODEL.' 

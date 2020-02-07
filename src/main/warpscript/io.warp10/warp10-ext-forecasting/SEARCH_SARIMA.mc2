@@ -16,7 +16,7 @@
 'params' {
 'interrupt' 'Time (in us) at which a signal will be sent to SAUTO to interrupt its search. Default to 30000000ms.' 
 'fitStrat' 'Fitting strategy employed. Can be one of CSS, CSSML, or ML. CSS means conditional least square and ML means maximum likelihood. Default to CSS.' 
-'input max size' 'Maximum number of most recent ticks to consider to build the forecast model. Default to 1000. The function has the side effect to shrink the input GTS to this value.' 
+'input max size' 'Maximum number of most recent ticks to consider to build the forecast model. Default to 1000. The function has the side effect to sort the input GTS if it has to discard the older ticks.' 
 'cycle' 'The number of ticks that compose a seasonal cycle.' 
 'gts' 'A Geo Time Series™.' 
 'model' 'An instance of X-GTSFORECASTMODEL.' 

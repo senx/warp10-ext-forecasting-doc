@@ -76,4 +76,6 @@ The input GTS needs not be bucketized and filled, but it will work better if it 
 
 Each next forecast will be on tick = last_tick + (last_tick - penultimate_tick).
 
-Use UNBUCKETIZE first if the last bucket does not match the tick of the last non-null value, or else there will be a gap between the last non-null value and the first forecast value. 
+Use UNBUCKETIZE first if the last bucket does not match the tick of the last non-null value, or else there will be a gap between the last non-null value and the first forecast value.
+
+The forecast functions have an optional argument that defines the maximum number of past ticks they use to build their model (max input size). The default value is dependent on the model so that their default time to execute is roughly equivalent.
