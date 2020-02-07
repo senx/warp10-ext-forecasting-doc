@@ -6,7 +6,7 @@
 'version' 'all' 
 'tags' [ 'forecast' 'machine learning' ] 
 'desc' 'Fit an auto regressive neural network model for forecasting.' 
-'sig' [ [ [ 'gts:LIST' ] [ 'model:X-GTSFORECASTMODEL' ] ] [ [ {
+'sig' [ [ [ 'pre:LONG' 'gts:LIST' ] [ 'model:X-GTSFORECASTMODEL' ] ] [ [ {
 'seeded' 'seeded:BOOLEAN' 
 'shuffle between epochs' 'shuffle between epochs:BOOLEAN' 
 'batch size' 'batch size:LONG' 
@@ -15,6 +15,7 @@
 'activation' 'activation:STRING' 
 'hidden neurons' 'hidden neurons:LIST' 
 'input max size' 'input max size:LONG' 
+'pre' 'pre:LONG' 
 'gts' 'gts:LIST' 
 } ] [ 'model:X-GTSFORECASTMODEL' ] ] ] 
 'params' {
@@ -26,6 +27,7 @@
 'activation' 'Activation function used. default to %27relu%27' 
 'hidden neurons' 'A LIST which size is the number of hidden layers and elements are the number of hidden neurons on each layer. Default to [ 100 ].' 
 'input max size' 'Maximum number of most recent ticks to consider to build the forecast model. Default to 1000. The function has the side effect to shrink the input GTS to this value.' 
+'pre' 'Number of previous values to consider to predict next values.' 
 'gts' 'A Geo Time Series™.' 
 'model' 'An instance of X-GTSFORECASTMODEL.' 
 } 
