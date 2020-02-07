@@ -28,7 +28,8 @@ SEARCH.ETS           // search for a suitable exponential trend-seasonal model (
 SEARCH.ARIMA         // search for a suitable Arima model (include ARMA and ARIMA)
 SEARCH.SARIMA        // search for a suitable Sarima model (include SARMA and SARIMA)
 SEARCH.NNET          // search for a suitable neural network model (include LSTM and NNETAR)
-AUTO                 // automatically choose a forecast model (include all of the above but ignore seasonal component)
+AUTO                 // automatically choose a forecast model (non-seasonal)
+SAUTO                // automatically choose a seasonal forecast model 
 </pre>
 
 Functions that take a GTS forecast model as argument:
@@ -63,7 +64,16 @@ DIFFERENCER       // build a GTS transformer for time differencing
 
 #### Examples
 
-`<GTS> AUTO 5 FORECAST` pushes onto the stack a GTS with 5 forecast ticks.
+`<GTS> AUTO 5 FORECAST` creates a GTS containing the 5 forecast ticks using an automatically selected model.
 
 `<GTS> AUTO 5 FORECAST.ADDVALUES` merges a GTS with its forecast.
 
+`<GTS> 24 SAUTO 48 FORECAST` creates a GTS containing the 48 forecast ticks using a model considering that there is a 24-tick seasonal cycle.
+
+#### Recommendations and troubleshooting
+
+The input GTS needs not be bucketized and filled, but it will work better if it is the case.
+
+Each next forecast will be on tick = last_tick + (last_tick - penultimate_tick).
+
+Use UNBUCKETIZE first if the last bucket does not match the tick of the last non-null value, or else there will be a gap between the last non-null value and the first forecast value. 
