@@ -1,0 +1,31 @@
+{
+'name' 'SAUTO' 
+'since' '2.3.1' 
+'deprecated' '' 
+'deleted' '' 
+'version' 'all' 
+'tags' [ 'forecast' 'machine learning' ] 
+'desc' 'Automatically compute a suitable forecast model.' 
+'sig' [ [ [ 'cycle:LONG' 'gts:LIST' ] [ 'model:X-GTSFORECASTMODEL' ] ] [ [ {
+'cycle' 'cycle:LONG' 
+'gts' 'gts:LIST' 
+} ] [ 'model:X-GTSFORECASTMODEL' ] ] ] 
+'params' {
+'cycle' 'The number of ticks that compose a seasonal cycle.' 
+'gts' 'A Geo Time Series™.' 
+'model' 'An instance of X-GTSFORECASTMODEL.' 
+} 
+'related' [ 'SES' 'FORECAST.ANOMALIES.DROP' 'SARIMA' 'SEARCH.NNET' 'FORECAST' 'HOLTWINTERS' 'CROSSFORECAST.ADDVALUES' 'RANDOMWALK' 'FORECAST.ADDVALUES' 'ANY.ARIMA' 'SRANDOMWALK' 'ARMA' 'AIC' 'INFORECAST' 'LSTM' 'NNETAR' 'CROSSFORECAST' 'SARMA' 'HOLT' 'SEARCH.ETS' 'SEARCH.ARIMA' 'AUTO' 'SEARCH.SARIMA' 'ARIMA' 'FORECAST.ANOMALIES' 'MODELINFO' 'STATIONARY' ] 
+'examples' [ ] 
+'conf' [ ] 
+} 'infomap' STORE
+<%
+!$infomap INFO
+<%
+'SAUTO' EVAL
+%>
+<% %> <% %> TRY
+%>
+'macro' STORE
+// Unit tests
+$macro
