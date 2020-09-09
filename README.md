@@ -28,11 +28,11 @@ SEARCH.ETS           // search for a suitable exponential trend-seasonal model (
 SEARCH.ARIMA         // search for a suitable Arima model (include ARMA and ARIMA)
 SEARCH.SARIMA        // search for a suitable Sarima model (include SARMA and SARIMA)
 SEARCH.NNET          // search for a suitable neural network model (include LSTM and NNETAR)
-AUTO                 // automatically choose a forecast model (non-seasonal)
-SAUTO                // automatically choose a seasonal forecast model 
+AUTO                 // automatically choose a forecast model (non-seasonal), using AIC
+SAUTO                // automatically choose a seasonal forecast model, using cross-validation
 </pre>
 
-Functions that take a GTS forecast model as argument:
+Functions that uses a GTSFORECASTMODEL:
 <pre>
 FORECAST                 // forecast values in the future
 FORECAST.ADDVALUES       // forecast values in the future and append them to observation GTS
@@ -40,25 +40,35 @@ INFORECAST               // produce in-sample one-step ahead forecasts
 CROSSFORECAST            // forecast values given a model fitted with another GTS
 CROSSFORECAST.ADDVALUES  // forecast values given a model fitted with another GTS and append them to input GTS
 FORECAST.ANOMALIES       // detect anomalies in in-sample forecast
-FORECAST.ANOMALIES.DROP  // detect anomalies in in-sample forecast and drop them from input GTS    
+FORECAST.ANOMALIES.DROP  // detect anomalies in in-sample forecast and drop them from input GTS
+</pre>
+
+Functions that gives info on a GTSFORECASTMODEL
+<pre> 
 MODELINFO                // return map of information about the model
-AIC                      // compute Akaike information criterion
+OBSERVATIONS             // observation GTS used for fitting the model
+AIC                      // Akaike information criterion
+AICC                     // corrected Akaike information criterion
+BIC                      // bayesian information criterion
+NPAR                     // number of parameters
+LOGLIKELIHOOD            // estimated log-likelihood
 </pre>
 
 Functions related to stationarity and differencing:
 <pre>
 STATIONARY     // test whether input GTS is stationary
+SEARCH.FOR.D   // search for the number of times a GTS needs differencing to become stationary
 DIFF           // apply time differencing with one or more seasonalities
 INVERTDIFF     // integrate with one or more seasonalities
+DIFFERENCER    // build a GTS transformer for time differencing
 </pre>
 
 Fit / Transform / Inverse-Transform  programming pattern (similar to sklearn)
 <pre>
+GTSTRANSFORMER    // create a GTS transformer from a set of macros
 FIT               // fit a GTS transformer
 TRANSFORM         // transform a GTS using a GTS transformer
 INVERSETRANSFORM  // inverse-transform a GTS using a GTS transformer
-GTSTRANSFORMER    // build a GTS transformer from a set of macros
-DIFFERENCER       // build a GTS transformer for time differencing
 </pre>
 
 
@@ -69,6 +79,8 @@ DIFFERENCER       // build a GTS transformer for time differencing
 `<GTS> AUTO 5 FORECAST.ADDVALUES` merges a GTS with its forecast.
 
 `<GTS> 24 SAUTO 48 FORECAST` creates a GTS containing the 48 forecast ticks using a model considering that there is a 24-tick seasonal cycle.
+
+`NEWGTS RANDOMWALK 1000 FORECAST` populates a new GTS with random walk
 
 #### Recommendations and troubleshooting
 
