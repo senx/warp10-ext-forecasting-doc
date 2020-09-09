@@ -1,0 +1,31 @@
+{
+'name' 'SEARCH.FOR.D' 
+'since' '2.3.1' 
+'deprecated' '' 
+'deleted' '' 
+'version' 'all' 
+'tags' [ 'forecast' 'machine learning' ] 
+'desc' 'Search for the number of differencing operation needed for a GTS to become stationary.' 
+'sig' [ [ [ 'max tries:LONG' 'gts:GTS' ] [ 'result:LONG' ] ] [ [ {
+'max tries' 'max tries:LONG' 
+'gts' 'gts:GTS' 
+} ] [ 'result:LONG' ] ] ] 
+'params' {
+'max tries' 'The maximal number of differencing that are done.' 
+'gts' 'A Geo Time Series™. This argument can be passed as a list, in which case this function will be applied for each element.' 
+'result' 'The number of differencing operations needed, or -1 if the GTS is still not stationary.' 
+} 
+'related' [ 'SES' 'FORECAST.ANOMALIES.DROP' 'SARIMA' 'LOGLIKELIHOOD' 'SEARCH.NNET' 'FORECAST' 'HOLTWINTERS' 'CROSSFORECAST.ADDVALUES' 'RANDOMWALK' 'FORECAST.ADDVALUES' 'ANY.ARIMA' 'AICC' 'NPAR' 'SRANDOMWALK' 'ARMA' 'AIC' 'BIC' 'INFORECAST' 'LSTM' 'NNETAR' 'CROSSFORECAST' 'SARMA' 'OBSERVATIONS' 'HOLT' 'SEARCH.ETS' 'SEARCH.ARIMA' 'AUTO' 'SEARCH.SARIMA' 'SAUTO' 'ARIMA' 'FORECAST.ANOMALIES' 'MODELINFO' 'STATIONARY' ] 
+'examples' [ ] 
+'conf' [ ] 
+} 'infomap' STORE
+<%
+!$infomap INFO
+<%
+'SEARCH.FOR.D' EVAL
+%>
+<% %> <% %> TRY
+%>
+'macro' STORE
+// Unit tests
+$macro

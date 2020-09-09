@@ -6,14 +6,14 @@
 'version' 'all' 
 'tags' [ 'forecast' 'machine learning' ] 
 'desc' 'Return a Map containing information about a GTS forecast Model.' 
-'sig' [ [ [ 'model:LIST' ] [ 'result:MAP' ] ] [ [ {
-'model' 'model:LIST' 
+'sig' [ [ [ 'model:GTSFORECASTMODEL' ] [ 'result:MAP' ] ] [ [ {
+'model' 'model:GTSFORECASTMODEL' 
 } ] [ 'result:MAP' ] ] ] 
 'params' {
-'model' 'An instance of X-GTSFORECASTMODEL.' 
+'model' 'An instance of GTSFORECASTMODEL. This argument can be passed as a list, in which case this function will be applied for each element.' 
 'result' 'A Map of parameters describing the input model.' 
 } 
-'related' [ 'SES' 'FORECAST.ANOMALIES.DROP' 'SARIMA' 'SEARCH.NNET' 'FORECAST' 'HOLTWINTERS' 'CROSSFORECAST.ADDVALUES' 'RANDOMWALK' 'FORECAST.ADDVALUES' 'ANY.ARIMA' 'SRANDOMWALK' 'ARMA' 'AIC' 'INFORECAST' 'LSTM' 'NNETAR' 'CROSSFORECAST' 'SARMA' 'HOLT' 'SEARCH.ETS' 'SEARCH.ARIMA' 'AUTO' 'SEARCH.SARIMA' 'SAUTO' 'ARIMA' 'FORECAST.ANOMALIES' 'STATIONARY' ] 
+'related' [ 'SES' 'FORECAST.ANOMALIES.DROP' 'SEARCH.FOR.D' 'SARIMA' 'LOGLIKELIHOOD' 'SEARCH.NNET' 'FORECAST' 'HOLTWINTERS' 'CROSSFORECAST.ADDVALUES' 'RANDOMWALK' 'FORECAST.ADDVALUES' 'ANY.ARIMA' 'AICC' 'NPAR' 'SRANDOMWALK' 'ARMA' 'AIC' 'BIC' 'INFORECAST' 'LSTM' 'NNETAR' 'CROSSFORECAST' 'SARMA' 'OBSERVATIONS' 'HOLT' 'SEARCH.ETS' 'SEARCH.ARIMA' 'AUTO' 'SEARCH.SARIMA' 'SAUTO' 'ARIMA' 'FORECAST.ANOMALIES' 'STATIONARY' ] 
 'examples' [ ] 
 'conf' [ ] 
 } 'infomap' STORE

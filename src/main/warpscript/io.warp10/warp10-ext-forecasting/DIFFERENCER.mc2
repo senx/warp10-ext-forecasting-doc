@@ -6,12 +6,12 @@
 'version' 'all' 
 'tags' [ 'time differencing' 'machine learning' ] 
 'desc' 'Create a GTSTRANSFORMER which applies time differencing to any GTS via the FIT TRANSFORM/INVERSETRANSFORM pattern. The differencing can compound multiple seasonalities.' 
-'sig' [ [ [ 'lags:LIST' ] [ 'transformer:X-GTSTRANSFORMER' ] ] [ [ {
+'sig' [ [ [ 'lags:LIST' ] [ 'transformer:X-ml.transform.GTSTransformer' ] ] [ [ {
 'lags' 'lags:LIST' 
-} ] [ 'transformer:X-GTSTRANSFORMER' ] ] ] 
+} ] [ 'transformer:X-ml.transform.GTSTransformer' ] ] ] 
 'params' {
 'lags' 'The lags (in number of buckets) corresponding to each seasonality that is being differenced.' 
-'transformer' 'The X-GTSTRANSFORMER.' 
+'transformer' 'The X-ml.transform.GTSTransformer.' 
 } 
 'related' [ 'DIFF' 'INVERTDIFF' ] 
 'examples' [ 'NEWGTS 1 100 <%25 NaN NaN NaN 4 PICK ADDVALUE %25> FOR%0a[ SWAP bucketizer.last 0 1 0 ] BUCKETIZE 0 GET%0a[ 1 ] DIFFERENCER FIT TRANSFORM' 'NEWGTS 1 100 <%25 NaN NaN NaN 4 PICK 2 * PI * 24 / COS ADDVALUE %25> FOR%0a[ SWAP bucketizer.last 0 1 0 ] BUCKETIZE 0 GET%0a[ 1 24 ] DIFFERENCER FIT %27differencer%27 STORE%0a$differencer TRANSFORM%0a1 + $differencer INVERSETRANSFORM ' ] 

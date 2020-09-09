@@ -6,24 +6,24 @@
 'version' 'all' 
 'tags' [ 'forecast' 'machine learning' ] 
 'desc' 'Fit a GTS forecast model of type neural network (which is an LSTM) to a Geo Time Series™.' 
-'sig' [ [ [ 'gts:LIST' ] [ 'model:X-GTSFORECASTMODEL' ] ] [ [ {
+'sig' [ [ [ 'gts:GTS' ] [ 'model:GTSFORECASTMODEL' ] ] [ [ {
 'learning rate' 'learning rate:DOUBLE' 
 'epochs' 'epochs:LONG' 
 'activation' 'activation:STRING' 
 'hidden neurons' 'hidden neurons:LIST' 
 'input max size' 'input max size:LONG' 
-'gts' 'gts:LIST' 
-} ] [ 'model:X-GTSFORECASTMODEL' ] ] ] 
+'gts' 'gts:GTS' 
+} ] [ 'model:GTSFORECASTMODEL' ] ] ] 
 'params' {
 'learning rate' 'The learning rate. Default to 0.01.' 
 'epochs' 'The number of training epochs. Default to 100.' 
 'activation' 'Activation function used. default to %27relu%27' 
 'hidden neurons' 'A LIST which size is the number of hidden layers and elements are the number of hidden neurons on each layer. Default to [ 20 ].' 
 'input max size' 'Maximum number of most recent ticks to consider to build the forecast model. Default to 100. The function has the side effect to sort the input GTS if it has to discard the older ticks.' 
-'gts' 'A Geo Time Series™.' 
-'model' 'An instance of X-GTSFORECASTMODEL.' 
+'gts' 'A Geo Time Series™. This argument can be passed as a list, in which case this function will be applied for each element.' 
+'model' 'An instance of GTSFORECASTMODEL.' 
 } 
-'related' [ 'SES' 'FORECAST.ANOMALIES.DROP' 'SARIMA' 'SEARCH.NNET' 'FORECAST' 'HOLTWINTERS' 'CROSSFORECAST.ADDVALUES' 'RANDOMWALK' 'FORECAST.ADDVALUES' 'ANY.ARIMA' 'SRANDOMWALK' 'ARMA' 'AIC' 'INFORECAST' 'NNETAR' 'CROSSFORECAST' 'SARMA' 'HOLT' 'SEARCH.ETS' 'SEARCH.ARIMA' 'AUTO' 'SEARCH.SARIMA' 'SAUTO' 'ARIMA' 'FORECAST.ANOMALIES' 'MODELINFO' 'STATIONARY' ] 
+'related' [ 'SES' 'FORECAST.ANOMALIES.DROP' 'SEARCH.FOR.D' 'SARIMA' 'LOGLIKELIHOOD' 'SEARCH.NNET' 'FORECAST' 'HOLTWINTERS' 'CROSSFORECAST.ADDVALUES' 'RANDOMWALK' 'FORECAST.ADDVALUES' 'ANY.ARIMA' 'AICC' 'NPAR' 'SRANDOMWALK' 'ARMA' 'AIC' 'BIC' 'INFORECAST' 'NNETAR' 'CROSSFORECAST' 'SARMA' 'OBSERVATIONS' 'HOLT' 'SEARCH.ETS' 'SEARCH.ARIMA' 'AUTO' 'SEARCH.SARIMA' 'SAUTO' 'ARIMA' 'FORECAST.ANOMALIES' 'MODELINFO' 'STATIONARY' ] 
 'examples' [ ] 
 'conf' [ ] 
 } 'infomap' STORE

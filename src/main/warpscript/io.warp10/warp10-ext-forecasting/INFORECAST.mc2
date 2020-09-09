@@ -6,14 +6,14 @@
 'version' 'all' 
 'tags' [ 'forecast' 'machine learning' ] 
 'desc' 'Produce in-sample one-step ahead forecasts given a GTS forecast model. Return a Geo Time Series™ containing the forecasts.' 
-'sig' [ [ [ 'model:LIST' ] [ 'result:GTS' ] ] [ [ {
-'model' 'model:LIST' 
+'sig' [ [ [ 'model:GTSFORECASTMODEL' ] [ 'result:GTS' ] ] [ [ {
+'model' 'model:GTSFORECASTMODEL' 
 } ] [ 'result:GTS' ] ] ] 
 'params' {
-'model' 'An instance of X-GTSFORECASTMODEL.' 
+'model' 'An instance of GTSFORECASTMODEL. This argument can be passed as a list, in which case this function will be applied for each element.' 
 'result' 'The GTS of forecasts.' 
 } 
-'related' [ 'SES' 'FORECAST.ANOMALIES.DROP' 'SARIMA' 'SEARCH.NNET' 'FORECAST' 'HOLTWINTERS' 'CROSSFORECAST.ADDVALUES' 'RANDOMWALK' 'FORECAST.ADDVALUES' 'ANY.ARIMA' 'SRANDOMWALK' 'ARMA' 'AIC' 'LSTM' 'NNETAR' 'CROSSFORECAST' 'SARMA' 'HOLT' 'SEARCH.ETS' 'SEARCH.ARIMA' 'AUTO' 'SEARCH.SARIMA' 'SAUTO' 'ARIMA' 'FORECAST.ANOMALIES' 'MODELINFO' 'STATIONARY' ] 
+'related' [ 'SES' 'FORECAST.ANOMALIES.DROP' 'SEARCH.FOR.D' 'SARIMA' 'LOGLIKELIHOOD' 'SEARCH.NNET' 'FORECAST' 'HOLTWINTERS' 'CROSSFORECAST.ADDVALUES' 'RANDOMWALK' 'FORECAST.ADDVALUES' 'ANY.ARIMA' 'AICC' 'NPAR' 'SRANDOMWALK' 'ARMA' 'AIC' 'BIC' 'LSTM' 'NNETAR' 'CROSSFORECAST' 'SARMA' 'OBSERVATIONS' 'HOLT' 'SEARCH.ETS' 'SEARCH.ARIMA' 'AUTO' 'SEARCH.SARIMA' 'SAUTO' 'ARIMA' 'FORECAST.ANOMALIES' 'MODELINFO' 'STATIONARY' ] 
 'examples' [ ] 
 'conf' [ ] 
 } 'infomap' STORE

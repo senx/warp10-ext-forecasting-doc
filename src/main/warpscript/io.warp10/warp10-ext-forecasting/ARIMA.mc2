@@ -6,24 +6,24 @@
 'version' 'all' 
 'tags' [ 'forecast' 'machine learning' ] 
 'desc' 'Fit a GTS forecast model of type ARIMA to a Geo Time Series™.' 
-'sig' [ [ [ 'q:LONG' 'd:LONG' 'p:LONG' 'gts:LIST' ] [ 'model:X-GTSFORECASTMODEL' ] ] [ [ {
+'sig' [ [ [ 'q:LONG' 'd:LONG' 'p:LONG' 'gts:GTS' ] [ 'model:GTSFORECASTMODEL' ] ] [ [ {
 'fitStrat' 'fitStrat:STRING' 
 'input max size' 'input max size:LONG' 
 'q' 'q:LONG' 
 'd' 'd:LONG' 
 'p' 'p:LONG' 
-'gts' 'gts:LIST' 
-} ] [ 'model:X-GTSFORECASTMODEL' ] ] ] 
+'gts' 'gts:GTS' 
+} ] [ 'model:GTSFORECASTMODEL' ] ] ] 
 'params' {
 'fitStrat' 'Fitting strategy employed. Can be one of CSS, CSSML, or ML. CSS means conditional least square and ML means maximum likelihood. Default to CSS.' 
 'input max size' 'Maximum number of most recent ticks to consider to build the forecast model. Default to 10000. The function has the side effect to sort the input GTS if it has to discard the older ticks.' 
 'q' 'The number of moving average coefficients.' 
 'd' 'The number of differencing operations.' 
 'p' 'The number of auto regressive coefficients.' 
-'gts' 'A Geo Time Series™.' 
-'model' 'An instance of X-GTSFORECASTMODEL.' 
+'gts' 'A Geo Time Series™. This argument can be passed as a list, in which case this function will be applied for each element.' 
+'model' 'An instance of GTSFORECASTMODEL.' 
 } 
-'related' [ 'SES' 'FORECAST.ANOMALIES.DROP' 'SARIMA' 'SEARCH.NNET' 'FORECAST' 'HOLTWINTERS' 'CROSSFORECAST.ADDVALUES' 'RANDOMWALK' 'FORECAST.ADDVALUES' 'ANY.ARIMA' 'SRANDOMWALK' 'ARMA' 'AIC' 'INFORECAST' 'LSTM' 'NNETAR' 'CROSSFORECAST' 'SARMA' 'HOLT' 'SEARCH.ETS' 'SEARCH.ARIMA' 'AUTO' 'SEARCH.SARIMA' 'SAUTO' 'FORECAST.ANOMALIES' 'MODELINFO' 'STATIONARY' ] 
+'related' [ 'SES' 'FORECAST.ANOMALIES.DROP' 'SEARCH.FOR.D' 'SARIMA' 'LOGLIKELIHOOD' 'SEARCH.NNET' 'FORECAST' 'HOLTWINTERS' 'CROSSFORECAST.ADDVALUES' 'RANDOMWALK' 'FORECAST.ADDVALUES' 'ANY.ARIMA' 'AICC' 'NPAR' 'SRANDOMWALK' 'ARMA' 'AIC' 'BIC' 'INFORECAST' 'LSTM' 'NNETAR' 'CROSSFORECAST' 'SARMA' 'OBSERVATIONS' 'HOLT' 'SEARCH.ETS' 'SEARCH.ARIMA' 'AUTO' 'SEARCH.SARIMA' 'SAUTO' 'FORECAST.ANOMALIES' 'MODELINFO' 'STATIONARY' ] 
 'examples' [ ] 
 'conf' [ ] 
 } 'infomap' STORE

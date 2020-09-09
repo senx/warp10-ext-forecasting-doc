@@ -6,18 +6,18 @@
 'version' 'all' 
 'tags' [ 'forecast' 'machine learning' ] 
 'desc' 'Fit a GTS forecast model of type RANDOMWALK to a Geo Time Series™. Internal random number generator must have been seeded first with PRNG.' 
-'sig' [ [ [ 'gts:LIST' ] [ 'model:X-GTSFORECASTMODEL' ] ] [ [ {
+'sig' [ [ [ 'gts:GTS' ] [ 'model:GTSFORECASTMODEL' ] ] [ [ {
 'lower bound' 'lower bound:DOUBLE' 
 'upper bound' 'upper bound:DOUBLE' 
-'gts' 'gts:LIST' 
-} ] [ 'model:X-GTSFORECASTMODEL' ] ] ] 
+'gts' 'gts:GTS' 
+} ] [ 'model:GTSFORECASTMODEL' ] ] ] 
 'params' {
-'lower bound' 'Lower radius of the interval around last value where the next random value can fall.' 
-'upper bound' 'Upper radius of the interval around last value where the next random value can fall.' 
-'gts' 'A Geo Time Series™.' 
-'model' 'An instance of X-GTSFORECASTMODEL.' 
+'lower bound' 'Lower bound of the random step. Default to minus half of input standard deviation' 
+'upper bound' 'Upper bound of the random step. Default to half of input standard deviation.' 
+'gts' 'A Geo Time Series™. This argument can be passed as a list, in which case this function will be applied for each element.' 
+'model' 'An instance of GTSFORECASTMODEL.' 
 } 
-'related' [ 'SES' 'FORECAST.ANOMALIES.DROP' 'SARIMA' 'SEARCH.NNET' 'FORECAST' 'HOLTWINTERS' 'CROSSFORECAST.ADDVALUES' 'RANDOMWALK' 'FORECAST.ADDVALUES' 'ANY.ARIMA' 'ARMA' 'AIC' 'INFORECAST' 'LSTM' 'NNETAR' 'CROSSFORECAST' 'SARMA' 'HOLT' 'SEARCH.ETS' 'SEARCH.ARIMA' 'AUTO' 'SEARCH.SARIMA' 'SAUTO' 'ARIMA' 'FORECAST.ANOMALIES' 'MODELINFO' 'STATIONARY' ] 
+'related' [ 'SES' 'FORECAST.ANOMALIES.DROP' 'SEARCH.FOR.D' 'SARIMA' 'LOGLIKELIHOOD' 'SEARCH.NNET' 'FORECAST' 'HOLTWINTERS' 'CROSSFORECAST.ADDVALUES' 'RANDOMWALK' 'FORECAST.ADDVALUES' 'ANY.ARIMA' 'AICC' 'NPAR' 'ARMA' 'AIC' 'BIC' 'INFORECAST' 'LSTM' 'NNETAR' 'CROSSFORECAST' 'SARMA' 'OBSERVATIONS' 'HOLT' 'SEARCH.ETS' 'SEARCH.ARIMA' 'AUTO' 'SEARCH.SARIMA' 'SAUTO' 'ARIMA' 'FORECAST.ANOMALIES' 'MODELINFO' 'STATIONARY' ] 
 'examples' [ ] 
 'conf' [ ] 
 } 'infomap' STORE

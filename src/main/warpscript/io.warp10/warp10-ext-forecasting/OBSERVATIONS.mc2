@@ -1,0 +1,29 @@
+{
+'name' 'OBSERVATIONS' 
+'since' '2.3.1' 
+'deprecated' '' 
+'deleted' '' 
+'version' 'all' 
+'tags' [ 'forecast' 'machine learning' ] 
+'desc' 'Return the GTS used to fit a GTS forecast model.' 
+'sig' [ [ [ 'model:GTSFORECASTMODEL' ] [ 'result:GTS' ] ] [ [ {
+'model' 'model:GTSFORECASTMODEL' 
+} ] [ 'result:GTS' ] ] ] 
+'params' {
+'model' 'An instance of GTSFORECASTMODEL. This argument can be passed as a list, in which case this function will be applied for each element.' 
+'result' 'The GTS of observations.' 
+} 
+'related' [ 'SES' 'FORECAST.ANOMALIES.DROP' 'SEARCH.FOR.D' 'SARIMA' 'LOGLIKELIHOOD' 'SEARCH.NNET' 'FORECAST' 'HOLTWINTERS' 'CROSSFORECAST.ADDVALUES' 'RANDOMWALK' 'FORECAST.ADDVALUES' 'ANY.ARIMA' 'AICC' 'NPAR' 'SRANDOMWALK' 'ARMA' 'AIC' 'BIC' 'INFORECAST' 'LSTM' 'NNETAR' 'CROSSFORECAST' 'SARMA' 'HOLT' 'SEARCH.ETS' 'SEARCH.ARIMA' 'AUTO' 'SEARCH.SARIMA' 'SAUTO' 'ARIMA' 'FORECAST.ANOMALIES' 'MODELINFO' 'STATIONARY' ] 
+'examples' [ ] 
+'conf' [ ] 
+} 'infomap' STORE
+<%
+!$infomap INFO
+<%
+'OBSERVATIONS' EVAL
+%>
+<% %> <% %> TRY
+%>
+'macro' STORE
+// Unit tests
+$macro

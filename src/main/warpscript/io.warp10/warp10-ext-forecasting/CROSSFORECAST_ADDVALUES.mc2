@@ -6,18 +6,18 @@
 'version' 'all' 
 'tags' [ 'forecast' 'machine learning' ] 
 'desc' 'Produce a forecast for a GTS, given a GTS forecast model fitted with another GTS. Append the forecast to the end of input GTS.' 
-'sig' [ [ [ 'steps:LONG' 'model:X-GTSFORECASTMODEL' 'gts:LIST' ] [ 'result:GTS' ] ] [ [ {
+'sig' [ [ [ 'steps:LONG' 'model:GTSFORECASTMODEL' 'gts:GTS' ] [ 'result:GTS' ] ] [ [ {
 'steps' 'steps:LONG' 
-'model' 'model:X-GTSFORECASTMODEL' 
-'gts' 'gts:LIST' 
+'model' 'model:GTSFORECASTMODEL' 
+'gts' 'gts:GTS' 
 } ] [ 'result:GTS' ] ] ] 
 'params' {
 'steps' 'The number of steps ahead to forecast.' 
-'model' 'A X-GTSFORECASTMODEL built with another GTS.' 
-'gts' 'A GTS.' 
+'model' 'A GTSFORECASTMODEL built with another GTS.' 
+'gts' 'A GTS. This argument can be passed as a list, in which case this function will be applied for each element.' 
 'result' 'The original GTS to which forecasts are appended.' 
 } 
-'related' [ 'SES' 'FORECAST.ANOMALIES.DROP' 'SARIMA' 'SEARCH.NNET' 'FORECAST' 'HOLTWINTERS' 'RANDOMWALK' 'FORECAST.ADDVALUES' 'ANY.ARIMA' 'SRANDOMWALK' 'ARMA' 'AIC' 'INFORECAST' 'LSTM' 'NNETAR' 'CROSSFORECAST' 'SARMA' 'HOLT' 'SEARCH.ETS' 'SEARCH.ARIMA' 'AUTO' 'SEARCH.SARIMA' 'SAUTO' 'ARIMA' 'FORECAST.ANOMALIES' 'MODELINFO' 'STATIONARY' ] 
+'related' [ 'SES' 'FORECAST.ANOMALIES.DROP' 'SEARCH.FOR.D' 'SARIMA' 'LOGLIKELIHOOD' 'SEARCH.NNET' 'FORECAST' 'HOLTWINTERS' 'RANDOMWALK' 'FORECAST.ADDVALUES' 'ANY.ARIMA' 'AICC' 'NPAR' 'SRANDOMWALK' 'ARMA' 'AIC' 'BIC' 'INFORECAST' 'LSTM' 'NNETAR' 'CROSSFORECAST' 'SARMA' 'OBSERVATIONS' 'HOLT' 'SEARCH.ETS' 'SEARCH.ARIMA' 'AUTO' 'SEARCH.SARIMA' 'SAUTO' 'ARIMA' 'FORECAST.ANOMALIES' 'MODELINFO' 'STATIONARY' ] 
 'examples' [ ] 
 'conf' [ ] 
 } 'infomap' STORE

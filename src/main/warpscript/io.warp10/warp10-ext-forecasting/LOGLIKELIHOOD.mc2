@@ -1,0 +1,29 @@
+{
+'name' 'LOGLIKELIHOOD' 
+'since' '2.3.1' 
+'deprecated' '' 
+'deleted' '' 
+'version' 'all' 
+'tags' [ 'forecast' 'machine learning' ] 
+'desc' 'Return the log-likelihood of a GTS forecast model.' 
+'sig' [ [ [ 'model:GTSFORECASTMODEL' ] [ 'result:DOUBLE' ] ] [ [ {
+'model' 'model:GTSFORECASTMODEL' 
+} ] [ 'result:DOUBLE' ] ] ] 
+'params' {
+'model' 'An instance of GTSFORECASTMODEL. This argument can be passed as a list, in which case this function will be applied for each element.' 
+'result' 'The log-likelihood of the model.' 
+} 
+'related' [ 'SES' 'FORECAST.ANOMALIES.DROP' 'SEARCH.FOR.D' 'SARIMA' 'SEARCH.NNET' 'FORECAST' 'HOLTWINTERS' 'CROSSFORECAST.ADDVALUES' 'RANDOMWALK' 'FORECAST.ADDVALUES' 'ANY.ARIMA' 'AICC' 'NPAR' 'SRANDOMWALK' 'ARMA' 'AIC' 'BIC' 'INFORECAST' 'LSTM' 'NNETAR' 'CROSSFORECAST' 'SARMA' 'OBSERVATIONS' 'HOLT' 'SEARCH.ETS' 'SEARCH.ARIMA' 'AUTO' 'SEARCH.SARIMA' 'SAUTO' 'ARIMA' 'FORECAST.ANOMALIES' 'MODELINFO' 'STATIONARY' ] 
+'examples' [ ] 
+'conf' [ ] 
+} 'infomap' STORE
+<%
+!$infomap INFO
+<%
+'LOGLIKELIHOOD' EVAL
+%>
+<% %> <% %> TRY
+%>
+'macro' STORE
+// Unit tests
+$macro

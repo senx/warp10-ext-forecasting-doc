@@ -6,22 +6,22 @@
 'version' 'all' 
 'tags' [ 'forecast' 'machine learning' ] 
 'desc' 'Fit a simple exponential smoothing forecast model.' 
-'sig' [ [ [ 'gts:LIST' ] [ 'model:X-GTSFORECASTMODEL' ] ] [ [ {
+'sig' [ [ [ 'gts:GTS' ] [ 'model:GTSFORECASTMODEL' ] ] [ [ {
 'max evals' 'max evals:LONG' 
 'optimize' 'optimize:BOOLEAN' 
 'alpha' 'alpha:DOUBLE' 
 'input max size' 'input max size:LONG' 
-'gts' 'gts:LIST' 
-} ] [ 'model:X-GTSFORECASTMODEL' ] ] ] 
+'gts' 'gts:GTS' 
+} ] [ 'model:GTSFORECASTMODEL' ] ] ] 
 'params' {
 'max evals' 'Maximum number of optimizing evaluations to converge to a solution.' 
 'optimize' 'Whether to optimize the model or use initial values. Default to true.' 
 'alpha' 'Initial value for alpha parameter (level coefficient). Default to 0.9' 
 'input max size' 'Maximum number of most recent ticks to consider to build the forecast model. Default to 10000. The function has the side effect to sort the input GTS if it has to discard the older ticks.' 
-'gts' 'A Geo Time Series™.' 
-'model' 'An instance of X-GTSFORECASTMODEL.' 
+'gts' 'A Geo Time Series™. This argument can be passed as a list, in which case this function will be applied for each element.' 
+'model' 'An instance of GTSFORECASTMODEL.' 
 } 
-'related' [ 'FORECAST.ANOMALIES.DROP' 'SARIMA' 'SEARCH.NNET' 'FORECAST' 'HOLTWINTERS' 'CROSSFORECAST.ADDVALUES' 'RANDOMWALK' 'FORECAST.ADDVALUES' 'ANY.ARIMA' 'SRANDOMWALK' 'ARMA' 'AIC' 'INFORECAST' 'LSTM' 'NNETAR' 'CROSSFORECAST' 'SARMA' 'HOLT' 'SEARCH.ETS' 'SEARCH.ARIMA' 'AUTO' 'SEARCH.SARIMA' 'SAUTO' 'ARIMA' 'FORECAST.ANOMALIES' 'MODELINFO' 'STATIONARY' ] 
+'related' [ 'FORECAST.ANOMALIES.DROP' 'SEARCH.FOR.D' 'SARIMA' 'LOGLIKELIHOOD' 'SEARCH.NNET' 'FORECAST' 'HOLTWINTERS' 'CROSSFORECAST.ADDVALUES' 'RANDOMWALK' 'FORECAST.ADDVALUES' 'ANY.ARIMA' 'AICC' 'NPAR' 'SRANDOMWALK' 'ARMA' 'AIC' 'BIC' 'INFORECAST' 'LSTM' 'NNETAR' 'CROSSFORECAST' 'SARMA' 'OBSERVATIONS' 'HOLT' 'SEARCH.ETS' 'SEARCH.ARIMA' 'AUTO' 'SEARCH.SARIMA' 'SAUTO' 'ARIMA' 'FORECAST.ANOMALIES' 'MODELINFO' 'STATIONARY' ] 
 'examples' [ ] 
 'conf' [ ] 
 } 'infomap' STORE

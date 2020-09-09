@@ -5,13 +5,13 @@
 'deleted' '' 
 'version' 'all' 
 'tags' [ 'transform' 'machine learning' ] 
-'desc' 'Fit a X-GTSTRANSFORMER that is on top of the stack with the GTS that is below it. Do not consume them off the stack.' 
-'sig' [ [ [ 'transformer:X-GTSTRANSFORMER' 'gts:GTS' ] [ 'transformer:X-GTSTRANSFORMER' 'gts:GTS' ] ] [ [ {
-'transformer' 'transformer:X-GTSTRANSFORMER' 
+'desc' 'Fit a X-ml.transform.GTSTransformer that is on top of the stack with the GTS that is below it. Do not consume them off the stack.' 
+'sig' [ [ [ 'transformer:X-ml.transform.GTSTransformer' 'gts:GTS' ] [ 'transformer:X-ml.transform.GTSTransformer' 'gts:GTS' ] ] [ [ {
+'transformer' 'transformer:X-ml.transform.GTSTransformer' 
 'gts' 'gts:GTS' 
-} ] [ 'transformer:X-GTSTRANSFORMER' 'gts:GTS' ] ] ] 
+} ] [ 'transformer:X-ml.transform.GTSTransformer' 'gts:GTS' ] ] ] 
 'params' {
-'transformer' 'The fitted X-GTSTRANSFORMER.' 
+'transformer' 'The fitted X-ml.transform.GTSTransformer.' 
 'gts' 'The fitter GTS.' 
 } 
 'related' [ 'GTSTRANSFORMER' 'INVERSETRANSFORM' 'TRANSFORM' ] 

@@ -6,13 +6,13 @@
 'version' 'all' 
 'tags' [ 'time differencing' 'machine learning' ] 
 'desc' 'Time differencing of input GTS. The differencing can compound multiple seasonalities.' 
-'sig' [ [ [ 'lags:LIST' 'gts:LIST' ] [ 'result:GTS' ] ] [ [ {
+'sig' [ [ [ 'lags:LIST' 'gts:GTS' ] [ 'result:GTS' ] ] [ [ {
 'lags' 'lags:LIST' 
-'gts' 'gts:LIST' 
+'gts' 'gts:GTS' 
 } ] [ 'result:GTS' ] ] ] 
 'params' {
 'lags' 'The lags (in number of buckets) corresponding to each seasonality that is being differenced.' 
-'gts' 'Input GTS to be differenced.' 
+'gts' 'Input GTS to be differenced. This argument can be passed as a list, in which case this function will be applied for each element.' 
 'result' 'Output.' 
 } 
 'related' [ 'DIFFERENCER' 'INVERTDIFF' ] 

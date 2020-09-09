@@ -5,13 +5,13 @@
 'deleted' '' 
 'version' 'all' 
 'tags' [ 'transform' 'machine learning' ] 
-'desc' 'Apply the transformation of a X-GTSTRANSFORMER to an input GTS.' 
-'sig' [ [ [ 'transformer:X-GTSTRANSFORMER' 'gts:GTS' ] [ 'result:GTS' ] ] [ [ {
-'transformer' 'transformer:X-GTSTRANSFORMER' 
+'desc' 'Apply the transformation of a X-ml.transform.GTSTransformer to an input GTS.' 
+'sig' [ [ [ 'transformer:X-ml.transform.GTSTransformer' 'gts:GTS' ] [ 'result:GTS' ] ] [ [ {
+'transformer' 'transformer:X-ml.transform.GTSTransformer' 
 'gts' 'gts:GTS' 
 } ] [ 'result:GTS' ] ] ] 
 'params' {
-'transformer' 'An instance of X-GTSTRANSFORMER.' 
+'transformer' 'An instance of X-ml.transform.GTSTransformer.' 
 'gts' 'The GTS that is being transformed.' 
 'result' 'The transformed GTS' 
 } 

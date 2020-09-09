@@ -6,18 +6,18 @@
 'version' 'all' 
 'tags' [ 'forecast' 'machine learning' ] 
 'desc' 'Find in-sample ticks of a Geo Time Series™ that are not well predicted by its GTS forecast model.' 
-'sig' [ [ [ 'model:LIST' ] [ 'result:LIST' ] ] [ [ {
+'sig' [ [ [ 'model:GTSFORECASTMODEL' ] [ 'result:LIST' ] ] [ [ {
 'mad' 'mad:BOOLEAN' 
 'alpha' 'alpha:DOUBLE' 
-'model' 'model:LIST' 
+'model' 'model:GTSFORECASTMODEL' 
 } ] [ 'result:LIST' ] ] ] 
 'params' {
 'mad' 'Whether or not to compare values against median rather than mean. Default to False.' 
 'alpha' 'The statistical significance. Default to 0.05.' 
-'model' 'An instance of X-GTSFORECASTMODEL.' 
+'model' 'An instance of GTSFORECASTMODEL. This argument can be passed as a list, in which case this function will be applied for each element.' 
 'result' 'A list with the anomalous ticks.' 
 } 
-'related' [ 'SES' 'FORECAST.ANOMALIES.DROP' 'SARIMA' 'SEARCH.NNET' 'FORECAST' 'HOLTWINTERS' 'CROSSFORECAST.ADDVALUES' 'RANDOMWALK' 'FORECAST.ADDVALUES' 'ANY.ARIMA' 'SRANDOMWALK' 'ARMA' 'AIC' 'INFORECAST' 'LSTM' 'NNETAR' 'CROSSFORECAST' 'SARMA' 'HOLT' 'SEARCH.ETS' 'SEARCH.ARIMA' 'AUTO' 'SEARCH.SARIMA' 'SAUTO' 'ARIMA' 'MODELINFO' 'STATIONARY' ] 
+'related' [ 'SES' 'FORECAST.ANOMALIES.DROP' 'SEARCH.FOR.D' 'SARIMA' 'LOGLIKELIHOOD' 'SEARCH.NNET' 'FORECAST' 'HOLTWINTERS' 'CROSSFORECAST.ADDVALUES' 'RANDOMWALK' 'FORECAST.ADDVALUES' 'ANY.ARIMA' 'AICC' 'NPAR' 'SRANDOMWALK' 'ARMA' 'AIC' 'BIC' 'INFORECAST' 'LSTM' 'NNETAR' 'CROSSFORECAST' 'SARMA' 'OBSERVATIONS' 'HOLT' 'SEARCH.ETS' 'SEARCH.ARIMA' 'AUTO' 'SEARCH.SARIMA' 'SAUTO' 'ARIMA' 'MODELINFO' 'STATIONARY' ] 
 'examples' [ ] 
 'conf' [ ] 
 } 'infomap' STORE
